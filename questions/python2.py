@@ -31,9 +31,13 @@
 # How does a for loop iterate through a string?
 
 def one(string):
+    list_1 = []
     for i in string:
-        string_3
-        return "string_3"
+        list_1.append(i)
+        list_1.append(i)
+        list_1.append(i)
+    string_3 = ''.join(list_1)
+    return string_3
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -116,8 +120,6 @@ def three(a):
 
 def four(string1, string2):
     length_four = len(string1)
-    #list_one = string1.split()
-    #list_two = string2.split()
     zipped_list = []
     for i in range(0, length_four):
         zipped_list.append(string1[i])
@@ -203,10 +205,13 @@ def six(string):
 
 
 def seven(a, b, c):
-    list_seven = [str(a), str(b), str(c)]
-    sorted_list_seven = list_seven.sort()
-    sml_med_diff = int(sorted_list_seven[1]) - int(sorted_list_seven[0])
-    med_lge_diff = int(sorted_list_seven[2]) - int(sorted_list_seven[1])
+    a_seven = a
+    b_seven = b
+    c_seven = c
+    list_seven = [int(c_seven), int(b_seven), int(a_seven)]
+    list_seven = list_seven.sort()
+    sml_med_diff = int(list_seven[1]) - int(list_seven[0])
+    med_lge_diff = int(list_seven[2]) - int(list_seven[1])
     if sml_med_diff == med_lge_diff:
         return True
     else:
@@ -231,7 +236,16 @@ def seven(a, b, c):
 
 
 def eight(string,  a):
-    return ""
+    length_eight = len(string)
+    num_remaining_char = (length_eight - a)
+    if num_remaining_char == 0:
+        return ""
+    else:
+        remaining_char_front = string[0:(int(num_remaining_char /2))]
+        remaining_char_end = string[-1:(int(num_remaining_char /2))]
+        remaining_char = remaining_char_front + remaining_char_end
+        return remaining_char
+    
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -251,7 +265,18 @@ def eight(string,  a):
 
 
 def nine(string1, string2):
-    return False
+    matches1 = []
+    matches2 = []
+    for i in string1:
+        if string1.count(i) <= string2.count(i):
+            matches1.append(i)
+    for i in string2:
+        if string2.count(i) <= string1.count(i):
+            matches2.append(i)
+    if len(matches1) == len(string1) or len(matches2) == len(string2):
+        return True
+    else:
+        return False
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -272,6 +297,7 @@ def nine(string1, string2):
 
 
 def ten(x, y):
-    return []
+    array = [[i * j for i in range(x)] for j in range(y)]
+    return array
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
