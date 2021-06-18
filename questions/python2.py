@@ -205,13 +205,10 @@ def six(string):
 
 
 def seven(a, b, c):
-    #a_seven = a
-    #b_seven = b
-    #c_seven = c
     list_seven = [a, b, c]
-    list_seven = list_seven.sort()
-    sml_med_diff = (list_seven[1]) - (list_seven[0])
-    med_lge_diff = (list_seven[2]) - (list_seven[1])
+    list_seven_sorted = list_seven.sort()
+    sml_med_diff = int(list_seven_sorted[1]) - int(list_seven_sorted[0])
+    med_lge_diff = int(list_seven_sorted[2]) - int(list_seven_sorted[1])
     if sml_med_diff == med_lge_diff:
         return True
     else:
