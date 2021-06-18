@@ -31,7 +31,9 @@
 # How does a for loop iterate through a string?
 
 def one(string):
-    return ""
+    for i in string:
+        string_3
+        return "string_3"
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -52,7 +54,14 @@ def one(string):
 
 
 def two(number):
-    return False
+    Factors = []
+    for i in range(1,number + 1):
+        if number % i == 0:
+            Factors.append(i)
+    if len(Factors) == 2:
+        return True
+    else:
+        return False
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -72,7 +81,9 @@ def two(number):
 
 
 def three(a):
-    return 1
+    number_a = int(a)
+    result = (number_a + (number_a * 11) + (number_a * 111) + (number_a * 1111))
+    return result
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -104,7 +115,15 @@ def three(a):
 
 
 def four(string1, string2):
-    return ""
+    length_four = len(string1)
+    #list_one = string1.split()
+    #list_two = string2.split()
+    zipped_list = []
+    for i in range(0, length_four):
+        zipped_list.append(string1[i])
+        zipped_list.append(string2[i])
+    zipped_string = ''.join(zipped_list)
+    return zipped_string
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -122,9 +141,16 @@ def four(string1, string2):
     # There is a module which can be used to generate random numbers, this module is called random.
     # The random module contains a function called randint.
 
+import random
 
 def five():
-    return []
+    five_list = []
+    for i in range(1,9999999):
+        num = random.randint(100,200)
+        if num % 2 == 0:
+            five_list.append(num)
+            if len(five_list) == 5:
+                return five_list
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -146,7 +172,11 @@ def five():
 
 
 def six(string):
-    return False
+    six_string = string.lower()
+    if six_string[-2:] == 'py':
+        return True
+    else:
+        return False
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -173,7 +203,14 @@ def six(string):
 
 
 def seven(a, b, c):
-    return False
+    list_seven = [str(a), str(b), str(c)]
+    sorted_list_seven = list_seven.sort()
+    sml_med_diff = int(sorted_list_seven[1]) - int(sorted_list_seven[0])
+    med_lge_diff = int(sorted_list_seven[2]) - int(sorted_list_seven[1])
+    if sml_med_diff == med_lge_diff:
+        return True
+    else:
+        return False
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
